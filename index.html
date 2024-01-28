@@ -1,130 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ร้านขายสินค้าและบริการ</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        /* สไตล์ CSS สำหรับการจัดรูปแบบหน้าเว็บไซต์ */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" onclick="changeTab('tab1')">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Tab 1</ion-label>
+    </ion-tab-button>
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
+    <ion-tab-button tab="tab2" onclick="changeTab('tab2')">
+      <ion-icon name="star"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
 
-        section {
-            padding: 20px;
-        }
+    <ion-tab-button tab="tab3" onclick="changeTab('tab3')">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+    <ion-tab-button tab="tab4" onclick="changeTab('tab4')">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Tab 4</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
 
-        /* สไตล์ CSS สำหรับรายการสินค้า */
-        .product-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+  <ion-tab tab="tab1">
+    <ion-content>
+      <div id="content-tab1">
+        <!-- Content for Tab 1 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
 
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 200px;
-            text-align: center;
-        }
+  <ion-tab tab="tab2">
+    <ion-content>
+      <div id="content-tab2">
+        <!-- Content for Tab 2 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
 
-        .product img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
+  <ion-tab tab="tab3">
+    <ion-content>
+      <div id="content-tab3">
+        <!-- Content for Tab 3 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
 
-        /* สไตล์ CSS สำหรับปุ่มสั่งซื้อ */
-        .order-btn {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+  <ion-tab tab="tab4">
+    <ion-content>
+      <div id="content-tab4">
+        <!-- Content for Tab 4 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
+</ion-tabs>
 
-        .order-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
+<script>
+  function changeTab(tab) {
+    fetchContentFromCDN(tab).then(content => {
+      document.getElementById('content-' + tab).innerHTML = content;
+    });
+  }
 
-    <header>
-        <h1>ร้านขายสินค้าและบริการ</h1>
-    </header>
+  function fetchContentFromCDN(tab) {
+    // Replace these URLs with the actual CDN URLs you want to use
+    const cdnUrls = [
+      'https://example.com/tab1.html',
+      'https://example.com/tab2.html',
+      'https://example.com/tab3.html',
+      'https://example.com/tab4.html',
+    ];
 
-    <section>
-        <h2>สินค้าและบริการ</h2>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- รายการสินค้า -->
-                <div class="swiper-slide">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>สินค้าที่ 1</h3>
-                    <p>รายละเอียดสินค้าที่นี่</p>
-                    <p>ราคา: ฿100.00</p>
-                    <button class="order-btn">สั่งซื้อ</button>
-                </div>
+    const tabIndex = parseInt(tab.slice(-1)) - 1;
+    
+    return fetch(cdnUrls[tabIndex])
+      .then(response => response.text())
+      .catch(error => console.error(`Error loading ${cdnUrls[tabIndex]}:`, error));
+  }
+</script>
 
-                <div class="swiper-slide">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h3>สินค้าที่ 2</h3>
-                    <p>รายละเอียดสินค้าที่นี่</p>
-                    <p>ราคา: ฿150.00</p>
-                    <button class="order-btn">สั่งซื้อ</button>
-                </div>
 
-                <!-- เพิ่มรายการสินค้าเพิ่มเติมตามต้องการ -->
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 ร้านขายสินค้าและบริการ</p>
-    </footer>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var mySwiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                loop: true,
-            });
-        });
-    </script>
-</body>
-</html>
