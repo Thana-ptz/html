@@ -2,83 +2,103 @@
 <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" /><ion-tabs>
 
+  <style>
+  .example-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+</style>
+
+<ion-tabs>
+  <ion-tab tab="home">
+    <ion-nav id="home-nav"></ion-nav>
+    <div id="home-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Listen now</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Listen now content</div>
+      </ion-content>
+    </div>
+  </ion-tab>
+  <ion-tab tab="radio">
+    <ion-nav id="radio-nav"></ion-nav>
+    <div id="radio-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Radio</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Radio content</div>
+      </ion-content>
+    </div>
+  </ion-tab>
+  <ion-tab tab="library">
+    <ion-nav id="library-nav"></ion-nav>
+    <div id="library-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Library</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Library content</div>
+      </ion-content>
+    </div>
+  </ion-tab>
+  <ion-tab tab="search">
+    <ion-nav id="search-nav"></ion-nav>
+    <div id="search-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Search</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="example-content">Search content</div>
+      </ion-content>
+    </div>
+  </ion-tab>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1" onclick="changeTab('tab1')">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+    <ion-tab-button tab="home">
+      <ion-icon name="play-circle"></ion-icon>
+      Listen Now
     </ion-tab-button>
-
-    <ion-tab-button tab="tab2" onclick="changeTab('tab2')">
-      <ion-icon name="star"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button tab="radio">
+      <ion-icon name="radio"></ion-icon>
+      Radio
     </ion-tab-button>
-
-    <ion-tab-button tab="tab3" onclick="changeTab('tab3')">
-      <ion-icon name="heart"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button tab="library">
+      <ion-icon name="library"></ion-icon>
+      Library
     </ion-tab-button>
-
-    <ion-tab-button tab="tab4" onclick="changeTab('tab4')">
-      <ion-icon name="settings"></ion-icon>
-      <ion-label>Tab 4</ion-label>
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
     </ion-tab-button>
   </ion-tab-bar>
-
-  <ion-tab tab="tab1">
-    <ion-content>
-      <div id="content-tab1">
-        <!-- Content for Tab 1 will be loaded dynamically -->
-      </div>
-    </ion-content>
-  </ion-tab>
-
-  <ion-tab tab="tab2">
-    <ion-content>
-      <div id="content-tab2">
-        <!-- Content for Tab 2 will be loaded dynamically -->
-      </div>
-    </ion-content>
-  </ion-tab>
-
-  <ion-tab tab="tab3">
-    <ion-content>
-      <div id="content-tab3">
-        <!-- Content for Tab 3 will be loaded dynamically -->
-      </div>
-    </ion-content>
-  </ion-tab>
-
-  <ion-tab tab="tab4">
-    <ion-content>
-      <div id="content-tab4">
-        <!-- Content for Tab 4 will be loaded dynamically -->
-      </div>
-    </ion-content>
-  </ion-tab>
 </ion-tabs>
 
 <script>
-  function changeTab(tab) {
-    fetchContentFromCDN(tab).then(content => {
-      document.getElementById('content-' + tab).innerHTML = content;
-    });
-  }
+  const homeNav = document.querySelector('#home-nav');
+  const homePage = document.querySelector('#home-page');
+  homeNav.root = homePage;
 
-  function fetchContentFromCDN(tab) {
-    // Replace these URLs with the actual CDN URLs you want to use
-    const cdnUrls = [
-      '/tab1.html',
-      '/tab2.html',
-      '/tab3.html',
-      '/tab4.html',
-    ];
+  const radioNav = document.querySelector('#radio-nav');
+  const radioPage = document.querySelector('#radio-page');
+  radioNav.root = radioPage;
 
-    const tabIndex = parseInt(tab.slice(-1)) - 1;
-    
-    return fetch(cdnUrls[tabIndex])
-      .then(response => response.text())
-      .catch(error => console.error(`Error loading ${cdnUrls[tabIndex]}:`, error));
-  }
+  const libraryNav = document.querySelector('#library-nav');
+  const libraryPage = document.querySelector('#library-page');
+  libraryNav.root = libraryPage;
+
+  const searchNav = document.querySelector('#search-nav');
+  const searchPage = document.querySelector('#search-page');
+  searchNav.root = searchPage;
 </script>
-
 
