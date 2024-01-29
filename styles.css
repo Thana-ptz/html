@@ -1,6 +1,6 @@
 
 
-.bottom-bar {
+.ion-tab-bar {
     background-color: #333;
     position: fixed;
     bottom: 0;
@@ -12,13 +12,13 @@
     color: white;
 }
 
-.bottom-bar a {
+.ion-tab-bar a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.bottom-bar a:hover {
+.ion-tab-bar a:hover {
     color: #ffcc00;
 }
