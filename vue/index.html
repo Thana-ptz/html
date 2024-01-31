@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue/index.html</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+
+        const App = {
+            template: `
+                <div>
+                    <header>
+                        <h1>ร้านขายสินค้าและบริการ</h1>
+                    </header>
+
+                    <section>
+                        <h2>สินค้าและบริการ</h2>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" v-for="(product, index) in products" :key="index">
+                                    <img :src="product.image" :alt="'Product ' + (index + 1)">
+                                    <h3>{{ product.name }}</h3>
+                                    <p>{{ product.description }}</p>
+                                    <p>ราคา: {{ product.price }} บาท</p>
+                                    <button class="order-btn">สั่งซื้อ</button>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <p>&copy; 2024 ร้านขายสินค้าและบริการ</p>
+                    </footer>
+                </div>
+            `,
+            setup() {
+                const products = ref([
+                    {
+                        name: 'สินค้าที่ 1',
+                        description: 'รายละเอียดสินค้าที่นี่',
+                        price: 100.00,
+                        image: 'https://cdn.store-assets.com/s/1336266/i/68150584.jpeg',
+                    },
+                    {
+                        name: 'สินค้าที่ 2',
+                        description: 'รายละเอียดสินค้าที่นี่',
+                        price: 150.00,
+                        image: 'https://cdn.store-assets.com/s/1336266/i/68150584.jpeg',
+                    },
+                    // Add more products as needed
+                ]);
+
+                onMounted(() => {
+                    const mySwiper = new Swiper('.swiper-container', {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        loop: true,
+                    });
+                });
+
+                return { products };
+            },
+        };
+
+        createApp(App).mount('#app');
+    </script>
+
+</body>
+</html>
