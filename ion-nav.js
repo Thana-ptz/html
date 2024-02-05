@@ -20,13 +20,13 @@ class PageOne extends HTMLElement {
       this.innerHTML = `
     
         <ion-toolbar>
-         <ion-item>
+         
          <ion-nav-link router-direction="forward" component="page-one">
               <ion-button>Go to Page Three</ion-button>
             </ion-nav-link>
-          <ion-label>Default Buttons</ion-label>
-          <ion-buttons slot="end"><ion-back-button></ion-back-button> End </ion-buttons>
-         </ion-item>
+          
+          <ion-buttons slot="end"><ion-back-button>back</ion-back-button> </ion-buttons>
+         
         </ion-toolbar>
     
     
