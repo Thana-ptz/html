@@ -1,3 +1,10 @@
+.example-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
 html.ios{--ion-default-font:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Roboto",sans-serif}
 html.md{--ion-default-font:"Roboto","Helvetica Neue",sans-serif}
 body.backdrop-no-scroll{overflow:hidden}
