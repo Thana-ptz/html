@@ -1,3 +1,9 @@
+ion-button.tnana {
+    background-color: #01da83;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 ion-header {
     --background-color: #01da83;
     --justify-content: space-around;
