@@ -21,7 +21,9 @@ class PageOne extends HTMLElement {
     
         <ion-toolbar>
          <ion-item>
-          <ion-back-button></ion-back-button>
+         <ion-nav-link router-direction="forward" component="page-one">
+              <ion-button>Go to Page Three</ion-button>
+            </ion-nav-link>
           <ion-label>Default Buttons</ion-label>
           <ion-buttons slot="end"><ion-back-button></ion-back-button> End </ion-buttons>
          </ion-item>
