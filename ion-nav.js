@@ -22,7 +22,7 @@ class PageOne extends HTMLElement {
         
          
          <ion-nav-link router-direction="forward" component="page-one">
-              <ion-button class="thana">Back</ion-button>
+              <ion-button>Back</ion-button>
             </ion-nav-link>
           
             
