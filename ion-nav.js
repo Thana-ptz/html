@@ -19,15 +19,13 @@ class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
     
-        <ion-toolbar>
+        
          
          <ion-nav-link router-direction="forward" component="page-one">
               <ion-button>Go to Page Three</ion-button>
             </ion-nav-link>
           
-          <ion-buttons slot="end"><ion-back-button>back</ion-back-button> </ion-buttons>
-         
-        </ion-toolbar>
+            
     
     
         <ion-content class="ion-padding">
