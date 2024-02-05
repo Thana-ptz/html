@@ -11,7 +11,7 @@ ion-tab-bar {
     justify-content: space-around;
     align-items: center;
     height: 60px;
-    color: white;
+    color: #01da83;
 }
 
 ion-tab-bar a {
