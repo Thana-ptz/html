@@ -1,5 +1,7 @@
 ion-header {
     background-color: #01da83;
+    justify-content: space-around;
+    align-items: center;
 }
 
 ion-toolbar {
