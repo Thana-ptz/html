@@ -1,3 +1,11 @@
+ion-header {
+    background-color: #01da83;
+}
+
+ion-toolbar {
+    background-color: #333;
+}
+
 ion-card {
     margin: 0 auto;
     padding: 20px;
