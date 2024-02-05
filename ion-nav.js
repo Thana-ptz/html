@@ -2,7 +2,7 @@ class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
         
-        <ion-content>
+        <ion-content class="ion-padding">
           <h1>Page One</h1>
           <ion-nav-link router-direction="forward" component="page-two">
             <ion-button>Go to Page Two</ion-button>
@@ -15,20 +15,13 @@ class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
     
-        
-         
+        <ion-content class="ion-padding">
          <ion-nav-link router-direction="forward" component="page-one">
               <ion-button>Back</ion-button>
-            </ion-nav-link>
-          
-            
-    
-    
-        <ion-content>
-        
+         </ion-nav-link>
           <ion-card color="dark">
              <ion-card-header>
-               <ion-card-title>Card Title</ion-card-title>
+               <ion-card-title><p>HELLO</p></ion-card-title>
                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
              </ion-card-header>
 
