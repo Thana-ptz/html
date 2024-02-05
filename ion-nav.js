@@ -18,14 +18,15 @@ class PageOne extends HTMLElement {
   class PageTwo extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-    <ion-header>
+    
         <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-          </ion-buttons>
-          <ion-title>Back</ion-title>
+         <ion-item>
+          <ion-back-button></ion-back-button>
+          <ion-label>Default Buttons</ion-label>
+          <ion-buttons slot="end"><ion-back-button></ion-back-button> End </ion-buttons>
+         </ion-item>
         </ion-toolbar>
-    </ion-header>
+    
     
         <ion-content class="ion-padding">
         
