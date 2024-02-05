@@ -1,6 +1,7 @@
 
 ion-tab-button {
     background-color: #fff;
+    position: relative;
 }
 ion-tab-bar {
     background-color: #333;
