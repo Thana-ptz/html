@@ -29,8 +29,8 @@ ion-tab-button {
 }
 
 ion-tab-bar {
-    border-radius: 5px 0px 8px 0px;
-    background-color: #fff;
+    border-radius: 15px 0px 15px 0px;
+    background-color: #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     bottom: 0;
