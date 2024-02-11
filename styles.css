@@ -39,6 +39,7 @@ ion-tab-bar {
     justify-content: space-around;
     align-items: center;
     height: 60px;
+    overflow: hidden;
 }
 
 ion-tab-bar a {
