@@ -33,7 +33,7 @@ ion-tab-bar {
     background-color: #01da83;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    bottom: 0;
+    bottom: 3;
     width: 90%;
     display: flex;
     justify-content: space-around;
