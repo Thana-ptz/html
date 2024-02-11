@@ -25,7 +25,7 @@ ion-card {
 }
 
 ion-tab-button {
-    background-color: #eee;
+    background-color: #fff;
 }
 
 ion-tab-bar {
@@ -33,10 +33,8 @@ ion-tab-bar {
     background-color: #01da83;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    bottom: 0px;
-    left: 1px;
-    right: 1px;
-    width: 100%;
+    bottom: 0;
+    width: 99%;
     display: flex;
     justify-content: space-around;
     align-items: center;
