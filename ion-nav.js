@@ -3,13 +3,13 @@ class PageOne extends HTMLElement {
       this.innerHTML = `
     
         
+          <ion-nav-link router-direction="forward" component="page-two">
+            
         <div class="scroll-container">
           <img src="https://html-five-phi.vercel.app/image/1.png" alt="Image 1">
           <img src="https://html-five-phi.vercel.app/image/2.png" alt="Image 2">
           <img src="https://html-five-phi.vercel.app/image/3.png" alt="Image 3">
         </div>
-          <ion-nav-link router-direction="forward" component="page-two">
-            <button class="ion-button">Go to Page Two</button>
           </ion-nav-link>
         
       `;
