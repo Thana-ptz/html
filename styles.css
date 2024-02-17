@@ -52,3 +52,23 @@ ion-tab-bar a {
 ion-tab-bar a:hover {
     color: #01da83;
 }
+
+
+<!-- CAROUSEL -->
+
+div.scroll-container {
+  background-color: none;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+div.scroll-container img:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
