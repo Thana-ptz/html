@@ -9,7 +9,7 @@ class PageOne extends HTMLElement {
           <img src="https://html-five-phi.vercel.app/image/3.png" alt="Image 3">
         </div>
           <ion-nav-link router-direction="forward" component="page-two">
-            <button class="btn">Go to Page Two</button>
+            <button class="container btn">Go to Page Two</button>
           </ion-nav-link>
         </ion-content>
       `;
