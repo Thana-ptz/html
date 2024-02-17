@@ -20,23 +20,31 @@ class PageOne extends HTMLElement {
       this.innerHTML = `
     
         
-         <ion-nav-link router-direction="forward" component="page-one">
-              <ion-button>Back</ion-button>
-         </ion-nav-link>
-          <ion-card color="dark">
-             <ion-card-header>
-               <ion-card-title><p>HELLO</p></ion-card-title>
-               <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-             </ion-card-header>
-
-             <ion-card-content> Card Content </ion-card-content>
-         </ion-card>
-         
-          <div>
-            <ion-nav-link router-direction="forward" component="page-three">
-              <ion-button>Go to Page Three</ion-button>
-            </ion-nav-link>
-          </div>
+         <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#"></a>
+  <a href="#"></a>
+  <a href="#"></a>
+  <a href="#"></a>
+</div>
+​
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
+​
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+​
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+}
+</script>
         
       `;
     }
