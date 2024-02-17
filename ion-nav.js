@@ -1,7 +1,11 @@
 class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        
+        <div class="scroll-container">
+  <img src="image/1.png" alt="Image 1">
+  <img src="image/2.png" alt="Image 2">
+  <img src="image/3.png" alt="Image 3">
+</div>
         <ion-content class="ion-padding">
         <div class="scroll-container">
   <img src="image/1.png" alt="Image 1">
