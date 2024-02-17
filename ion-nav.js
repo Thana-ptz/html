@@ -2,7 +2,7 @@ class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
     
-        <ion-content class="ion-padding">
+        
         <div class="scroll-container">
           <img src="https://html-five-phi.vercel.app/image/1.png" alt="Image 1">
           <img src="https://html-five-phi.vercel.app/image/2.png" alt="Image 2">
@@ -11,7 +11,7 @@ class PageOne extends HTMLElement {
           <ion-nav-link router-direction="forward" component="page-two">
             <button class="ion-button">Go to Page Two</button>
           </ion-nav-link>
-        </ion-content>
+        
       `;
     }
   }
@@ -19,7 +19,7 @@ class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
     
-        <ion-content class="ion-padding">
+        
          <ion-nav-link router-direction="forward" component="page-one">
               <ion-button>Back</ion-button>
          </ion-nav-link>
@@ -37,24 +37,16 @@ class PageOne extends HTMLElement {
               <ion-button>Go to Page Three</ion-button>
             </ion-nav-link>
           </div>
-        </ion-content>
+        
       `;
     }
   }
   class PageThree extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        <ion-header>
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-back-button></ion-back-button>
-            </ion-buttons>
-            <ion-title>Page Three</ion-title>
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
+        
           <h1>Page Three</h1>
-        </ion-content>
+        
       `;
     }
   }
