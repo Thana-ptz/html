@@ -1,19 +1,15 @@
 class PageOne extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        <div class="scroll-container">
-  <img src="image/1.png" alt="Image 1">
-  <img src="image/2.png" alt="Image 2">
-  <img src="image/3.png" alt="Image 3">
-</div>
+    
         <ion-content class="ion-padding">
         <div class="scroll-container">
-  <img src="image/1.png" alt="Image 1">
-  <img src="image/2.png" alt="Image 2">
-  <img src="image/3.png" alt="Image 3">
-</div>
+          <img src="https://html-five-phi.vercel.app/image/1.png" alt="Image 1">
+          <img src="https://html-five-phi.vercel.app/image/2.png" alt="Image 2">
+          <img src="https://html-five-phi.vercel.app/image/3.png" alt="Image 3">
+        </div>
           <ion-nav-link router-direction="forward" component="page-two">
-            <ion-button>Go to Page Two</ion-button>
+            <button>Go to Page Two</button>
           </ion-nav-link>
         </ion-content>
       `;
