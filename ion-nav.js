@@ -18,7 +18,7 @@ class PageOne extends HTMLElement {
   class PageTwo extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-    
+    <ion-content>
         
          <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -32,7 +32,7 @@ class PageOne extends HTMLElement {
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 </div>
 ​
-
+</ion-content>
         
       `;
     }
