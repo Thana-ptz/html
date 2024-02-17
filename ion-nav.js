@@ -3,7 +3,11 @@ class PageOne extends HTMLElement {
       this.innerHTML = `
         
         <ion-content class="ion-padding">
-          <h1>Page One</h1>
+        <div class="scroll-container">
+  <img src="image/1.png" alt="Image 1">
+  <img src="image/2.png" alt="Image 2">
+  <img src="image/3.png" alt="Image 3">
+</div>
           <ion-nav-link router-direction="forward" component="page-two">
             <ion-button>Go to Page Two</ion-button>
           </ion-nav-link>
