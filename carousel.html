@@ -20,7 +20,9 @@
     }
 
     .carousel-item {
-      width: 30%;
+      width: 200px;
+      padding: 5px;
+      overflow: hidden;
       flex: 0 0 auto;
     }
 
@@ -83,7 +85,7 @@
   const nextBtn = document.querySelector(".next");
   let currentIndex = 0;
   let startX = null;
-  let isDragging = false;
+  let isDragging = null;
 
   // ฟังก์ชันเลื่อน carousel ไปทางขวาหรือซ้าย
   function showItem(index) {
