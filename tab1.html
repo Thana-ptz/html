@@ -7,22 +7,21 @@
 <style>
     /* CSS เพื่อสไตล์เมนูแท็ป */
     .tab {
+        display: flex;
+        justify-content: space-around; /* จัดตำแหน่งปุ่มให้อยู่ตรงกลาง */
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
-        width: 100%;
     }
 
     /* ปุ่มเมนูแท็ป */
     .tab button {
         background-color: inherit;
-        width: auto;
-        float: left;
-        display: relative;
         border: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
+        padding: 14px 0; /* เปลี่ยนการกำหนด padding เพื่อให้ความกว้างเต็มจอ */
+        flex: 1; /* ทำให้ปุ่มเต็มความกว้าง */
         transition: 0.3s;
     }
 
