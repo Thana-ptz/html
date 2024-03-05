@@ -3,23 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tab 3 Content</title>
-  <style>
-   
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-  </style>
+  <title>Ionic Bottom Bar</title>
+  <!-- เพิ่ม CDN สำหรับ Ionic Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/core.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 </head>
 <body>
-  <h1>Tab 3 Content Loaded from CDN</h1>
-  <p>This is the content for Tab 3 loaded from a CDN.</p>
 
+  <!-- ส่วนของเนื้อหา -->
+  <ion-content>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>หน้าหลัก</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- เนื้อหาหลักของคุณ -->
+    <div class="ion-padding">
+      <p>เนื้อหาหลักของคุณที่นี่</p>
+    </div>
+  </ion-content>
+
+  <!-- Bottom Bar -->
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <!-- ส่วนของปุ่มด้านซ้าย -->
+        <ion-button>
+          <ion-icon name="home"></ion-icon>
+          Home
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title>ชื่อแท็บ</ion-title>
+
+      <ion-buttons slot="end">
+        <!-- ส่วนของปุ่มด้านขวา -->
+        <ion-button id="settingsButton">
+          <ion-icon name="settings"></ion-icon>
+          Settings
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+
+  <!-- JavaScript -->
   <script>
-    // Additional JavaScript specific to Tab 1 can be added here
-    console.log('JavaScript for Tab 1');
+    document.getElementById('settingsButton').addEventListener('click', function() {
+      // เมื่อคลิกที่แท็บ "Settings" ให้เรียกฟังก์ชัน loadSettingsData()
+      loadSettingsData();
+    });
+
+    function loadSettingsData() {
+      // ใช้ Fetch API เพื่อโหลดข้อมูลจาก URL และแสดงผลในหน้าเว็บ
+      fetch('http://thitapa.easy.co/collections/all')
+        .then(response => response.text())
+        .then(data => {
+          // แสดงข้อมูลที่โหลดได้ในหน้าเว็บ
+          document.body.innerHTML = data;
+        })
+        .catch(error => console.error('เกิดข้อผิดพลาดในการโหลดข้อมูล:', error));
+    }
   </script>
+
 </body>
 </html>
+
