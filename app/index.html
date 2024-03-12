@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-commerce App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.5/css/ionic.min.css">
   <script src="https://code.ionicframework.com/ionic.bundle.js"></script>
 </head>
 <body ng-app="ecommerceApp">
@@ -124,7 +125,116 @@
     </ion-view>
   </script>
 
-  <!-- ฯลฯ -->
+  <!-- Cart Page -->
+  <script type="text/ng-template" id="templates/cart.html">
+    <ion-view title="Cart">
+      <ion-content>
+        <h2>รายการสินค้าในตะกร้า</h2>
+        <!-- รายการสินค้าในตะกร้า -->
+        <h2>ประมาณราคาทั้งหมด</h2>
+        <!-- ประมาณราคาทั้งหมด -->
+        <ion-button color="primary">สั่งซื้อ/ชำระเงิน</ion-button>
+        <!-- ปุ่มสั่งซื้อ/ชำระเงิน -->
+        <!-- ปรับปรุงจำนวนหรือลบสินค้า -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Checkout Page -->
+  <script type="text/ng-template" id="templates/checkout.html">
+    <ion-view title="Checkout">
+      <ion-content>
+        <!-- แบบฟอร์มให้กรอกข้อมูลการจัดส่งและการชำระเงิน -->
+        <h2>สรุปรายการสั่งซื้อ</h2>
+        <!-- สรุปรายการสั่งซื้อ -->
+        <!-- ตัวเลือกวิธีการจัดส่งและการชำระเงิน -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Profile Page -->
+  <script type="text/ng-template" id="templates/profile.html">
+    <ion-view title="Profile">
+      <ion-content>
+        <!-- ข้อมูลส่วนตัวของผู้ใช้ -->
+        <h2>ประวัติการสั่งซื้อ</h2>
+        <!-- ประวัติการสั่งซื้อ -->
+        <!-- ตั้งค่าบัญชี -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Search Page -->
+  <script type="text/ng-template" id="templates/search.html">
+    <ion-view title="Search">
+      <ion-content>
+        <!-- ช่องค้นหา -->
+        <!-- ตัวกรองผลการค้นหา -->
+        <!-- รายการผลลัพธ์การค้นหา -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Membership Page -->
+  <script type="text/ng-template" id="templates/membership.html">
+    <ion-view title="Membership">
+      <ion-content>
+        <!-- ข้อเสนอสมาชิก -->
+        <!-- ประโยชน์ของการสมัครสมาชิก -->
+        <!-- รายละเอียดแพ็คเกจสมาชิก -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Reviews Page -->
+  <script type="text/ng-template" id="templates/reviews.html">
+    <ion-view title="Reviews">
+      <ion-content>
+        <!-- รีวิวจากลูกค้า -->
+        <!-- คะแนนและความคิดเห็นเกี่ยวกับสินค้า -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Notifications Page -->
+  <script type="text/ng-template" id="templates/notifications.html">
+    <ion-view title="Notifications">
+      <ion-content>
+        <!-- แจ้งเตือนเกี่ยวกับสถานะการสั่งซื้อ -->
+        <!-- ข้อความและการแจ้งเตือนอื่น ๆ -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Help Page -->
+  <script type="text/ng-template" id="templates/help.html">
+    <ion-view title="Help">
+      <ion-content>
+        <!-- แหล่งข้อมูลที่ช่วยแก้ปัญหา -->
+        <!-- ติดต่อเรื่องข้อความหรือโทรศัพท์สำหรับสนับสนุน -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- About Page -->
+  <script type="text/ng-template" id="templates/about.html">
+    <ion-view title="About">
+      <ion-content>
+        <!-- ข้อมูลเกี่ยวกับบริษัทหรือแบรนด์ -->
+        <!-- ประวัติความเป็นมา -->
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Terms Page -->
+  <script type="text/ng-template" id="templates/terms.html">
+    <ion-view title="Terms">
+      <ion-content>
+        <!-- เงื่อนไขการใช้บริการ -->
+        <!-- ข้อตกลงและเงื่อนไขการสั่งซื้อ -->
+      </ion-content>
+    </ion-view>
+  </script>
 
 </body>
 </html>
