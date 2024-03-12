@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce App</title>
+  <script src="https://code.ionicframework.com/ionic.bundle.js"></script>
+</head>
+<body ng-app="ecommerceApp">
+
+  <ion-nav-view></ion-nav-view>
+
+  <script>
+    angular.module('ecommerceApp', ['ionic'])
+
+    .config(function($stateProvider, $urlRouterProvider) {
+      
+      $stateProvider
+
+      .state('home', {
+        url: '/home',
+        templateUrl: 'templates/home.html'
+      })
+
+      .state('product', {
+        url: '/product/:productId',
+        templateUrl: 'templates/product.html'
+      })
+
+      .state('cart', {
+        url: '/cart',
+        templateUrl: 'templates/cart.html'
+      })
+
+      .state('checkout', {
+        url: '/checkout',
+        templateUrl: 'templates/checkout.html'
+      })
+
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'templates/profile.html'
+      })
+
+      .state('search', {
+        url: '/search',
+        templateUrl: 'templates/search.html'
+      })
+
+      .state('membership', {
+        url: '/membership',
+        templateUrl: 'templates/membership.html'
+      })
+
+      .state('reviews', {
+        url: '/reviews',
+        templateUrl: 'templates/reviews.html'
+      })
+
+      .state('notifications', {
+        url: '/notifications',
+        templateUrl: 'templates/notifications.html'
+      })
+
+      .state('help', {
+        url: '/help',
+        templateUrl: 'templates/help.html'
+      })
+
+      .state('about', {
+        url: '/about',
+        templateUrl: 'templates/about.html'
+      })
+
+      .state('terms', {
+        url: '/terms',
+        templateUrl: 'templates/terms.html'
+      });
+
+      $urlRouterProvider.otherwise('/home');
+
+    });
+
+  </script>
+
+  <!-- Home Page -->
+  <script type="text/ng-template" id="templates/home.html">
+    <ion-view title="Home">
+      <ion-content>
+        <ion-button href="#/login" color="primary">เข้าสู่ระบบ</ion-button>
+        <ion-button href="#/register" color="secondary">สมัครสมาชิก</ion-button>
+        <h2>สินค้าแนะนำ</h2>
+        <ion-list>
+          <ion-item>สินค้าที่ 1</ion-item>
+          <ion-item>สินค้าที่ 2</ion-item>
+          <ion-item>สินค้าที่ 3</ion-item>
+        </ion-list>
+        <ion-searchbar></ion-searchbar>
+        <h2>หมวดหมู่สินค้า</h2>
+        <ion-list>
+          <ion-item>หมวดหมู่ที่ 1</ion-item>
+          <ion-item>หมวดหมู่ที่ 2</ion-item>
+          <ion-item>หมวดหมู่ที่ 3</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- Product Page -->
+  <script type="text/ng-template" id="templates/product.html">
+    <ion-view title="Product">
+      <ion-content>
+        <img src="product-image.jpg" alt="Product Image">
+        <h2>ชื่อสินค้า</h2>
+        <p>รายละเอียดสินค้า: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>ราคา: $100</p>
+        <ion-button color="primary">เพิ่มลงตะกร้า</ion-button>
+        <h2>รีวิวและคะแนนสินค้า</h2>
+        <ion-list>
+          <ion-item>รีวิวที่ 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ion-item>
+          <ion-item>รีวิวที่ 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-view>
+  </script>
+
+  <!-- ฯลฯ -->
+
+</body>
+</html>
