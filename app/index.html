@@ -128,6 +128,16 @@ footer {
         left: -100%;
     }
 }
+ .thana-segment {
+  display: flex; /* หรือ display: grid; */
+  justify-content: space-around; /* หรืออะไรก็ได้ตามที่คุณต้องการ */
+  align-items: center; /* หรืออะไรก็ได้ตามที่คุณต้องการ */
+}
+
+ion-segment-button {
+  /* ใส่สไตล์ที่คุณต้องการเพื่อปรับขนาดหรือลักษณะที่ต้องการ */
+}
+
 </style>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
@@ -138,7 +148,7 @@ footer {
 <header>
     
     
-      <nav>
+      <div class="thana-segment">
             
 
 <ion-segment scrollable="true" value="heart">
@@ -170,7 +180,7 @@ footer {
     
   </ion-segment-button></a>
 </ion-segment>
-    </nav>    
+      </div>
         
   <!-- Main content -->
 <main>
