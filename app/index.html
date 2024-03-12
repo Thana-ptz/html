@@ -154,73 +154,106 @@ footer {
     <!-- Homepage -->
     <section id="home">
         <h2>Homepage</h2>
-        <!-- Content for home page -->
+        <p>Welcome to our E-Commerce App! Explore our featured products and promotions.</p>
+        <button onclick="showPage('products')">Explore Products</button>
     </section>
 
     <!-- Product Page -->
     <section id="products">
         <h2>Product Page</h2>
-        <!-- Content for product page -->
+        <div>
+            <img src="product.jpg" alt="Product Image">
+            <h3>Product Name</h3>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Price: $99.99</p>
+            <button onclick="addToCart()">Add to Cart</button>
+            <div>
+                <h4>Reviews</h4>
+                <p>Rating: 4.5/5 (Based on 100 reviews)</p>
+                <!-- Reviews section -->
+            </div>
+        </div>
     </section>
 
     <!-- Cart Page -->
     <section id="cart">
         <h2>Cart Page</h2>
-        <!-- Content for cart page -->
+        <ul>
+            <li>Product Name - $99.99 <button onclick="removeFromCart()">Remove</button></li>
+            <!-- List of products in cart -->
+        </ul>
+        <p>Total: $99.99</p>
+        <button onclick="checkout()">Checkout</button>
     </section>
 
     <!-- Checkout Page -->
     <section id="checkout">
         <h2>Checkout Page</h2>
-        <!-- Content for checkout page -->
+        <form>
+            <!-- Checkout form -->
+        </form>
     </section>
 
     <!-- Profile Page -->
     <section id="profile">
         <h2>Profile Page</h2>
-        <!-- Content for profile page -->
+        <p>Username: user123</p>
+        <p>Email: user123@example.com</p>
+        <p>Address: 123 Street, City, Country</p>
+        <!-- Edit profile form -->
     </section>
 
     <!-- Search Page -->
     <section id="search">
         <h2>Search Page</h2>
-        <!-- Content for search page -->
+        <input type="text" placeholder="Search products...">
+        <!-- Search results -->
     </section>
 
     <!-- Membership Page -->
     <section id="membership">
         <h2>Membership Page</h2>
-        <!-- Content for membership page -->
+        <p>Join our membership program to enjoy exclusive benefits and discounts!</p>
+        <!-- Membership details -->
     </section>
 
     <!-- Reviews Page -->
     <section id="reviews">
         <h2>Reviews Page</h2>
-        <!-- Content for reviews page -->
+        <div>
+            <h3>Product Name</h3>
+            <p>Rating: 4.5/5</p>
+            <p>Reviews:</p>
+            <!-- List of reviews -->
+        </div>
     </section>
 
     <!-- Notifications Page -->
     <section id="notifications">
         <h2>Notifications Page</h2>
-        <!-- Content for notifications page -->
+        <p>You have a new order. Click here to view details.</p>
+        <!-- List of notifications -->
     </section>
 
     <!-- Help & Support Page -->
     <section id="help">
         <h2>Help & Support Page</h2>
-        <!-- Content for help & support page -->
+        <p>Need assistance? Contact us via email or phone for support.</p>
+        <!-- Contact information -->
     </section>
 
     <!-- About Page -->
     <section id="about">
         <h2>About Page</h2>
-        <!-- Content for about page -->
+        <p>Learn more about our company and our mission.</p>
+        <!-- Company information -->
     </section>
 
     <!-- Terms & Conditions Page -->
     <section id="terms">
         <h2>Terms & Conditions Page</h2>
-        <!-- Content for terms & conditions page -->
+        <p>Read our terms & conditions before making a purchase.</p>
+        <!-- Terms & conditions details -->
     </section>
 </main>
 
