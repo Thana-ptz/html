@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <script type="module" src="ion-nav.js"></script>
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  
+
+
+  <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" onclick="changeTab('tab1')">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>Tab 1</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" onclick="changeTab('tab2')">
+      <ion-icon name="star"></ion-icon>
+      <ion-label>Tab 2</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" onclick="changeTab('tab3')">
+      <ion-icon name="heart"></ion-icon>
+      <ion-label>Tab 3</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab4" onclick="changeTab('tab4')">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>Tab 4</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+  <ion-tab tab="tab1">
+    <ion-content>
+      <div id="content-tab1">
+        <!-- Content for Tab 1 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab tab="tab2">
+    <ion-content>
+      <div id="content-tab2">
+        <!-- Content for Tab 2 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab tab="tab3">
+    <ion-content>
+      <div id="content-tab3">
+        <!-- Content for Tab 3 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab tab="tab4">
+    <ion-content>
+      <div id="content-tab4">
+        <!-- Content for Tab 4 will be loaded dynamically -->
+      </div>
+    </ion-content>
+  </ion-tab>
+</ion-tabs>
+
+<script>
+  function changeTab(tab) {
+    fetchContentFromCDN(tab).then(content => {
+      document.getElementById('content-' + tab).innerHTML = content;
+    });
+  }
+
+  function fetchContentFromCDN(tab) {
+    // Replace these URLs with the actual CDN URLs you want to use
+    const cdnUrls = [
+      'https://html-five-phi.vercel.app/index.html',
+      'https://html-five-phi.vercel.app/tab1.html',
+      'https://html-five-phi.vercel.app/tab3.html',
+      'https://html-five-phi.vercel.app/tab4.html',
+    ];
+
+    const tabIndex = parseInt(tab.slice(-1)) - 1;
+    
+    return fetch(cdnUrls[tabIndex])
+      .then(response => response.text())
+      .catch(error => console.error(`Error loading ${cdnUrls[tabIndex]}:`, error));
+  }
+</script>
+
+</body>
+</html>
